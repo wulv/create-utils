@@ -9,12 +9,12 @@
   "homepage": "https://github.com/wulv/create-utils#readme",
   "license": "ISC",
   "main": "lib/index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+  "bin": {
+    "create-utils": "./lib/index.js"
   },
   "files": [
-    "lib"
+    "lib",
+    "package.json"
   ],
   "repository": {
     "type": "git",

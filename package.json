@@ -1,5 +1,5 @@
 {
-  "name": "rocreate-utils",
+  "name": "create-utils",
   "private": true,
   "devDependencies": {
     "lerna": "^3.8.1",
