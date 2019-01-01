@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import commander from 'commander';
-import init from './cli/init';
 import dev from './cli/dev';
 import publish from './cli/publish';
 import test from './cli/test';
@@ -12,13 +11,6 @@ const pkg = require('../package.json');
 
 commander
   .version(pkg.version, '-v, --version');
-
-commander
-  .command('init [paojectName]')
-  .description('initialize your project')
-  .action(projectName => {
-    init(projectName);
-  });
 
 commander
   .command('dev')

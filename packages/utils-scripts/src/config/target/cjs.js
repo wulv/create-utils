@@ -1,7 +1,5 @@
-import path from 'path';
 const dtsExport = require('../plugins/dts-export');
-const addModuleExports = require('babel-plugin-add-module-exports');
-const presetEnv = require('@babel/preset-env');
+const transformEs2015ModulesSimpleCommonjs = require('babel-plugin-transform-es2015-modules-simple-commonjs');
 module.exports = {
   // build config
   tsconfig: {
@@ -12,7 +10,7 @@ module.exports = {
     "declaration": true,
     "sourceMap": false,
     "baseUrl": ".",
-    module: 'esnext'
+    "module": "esnext",
   },
   js: {
     tsconfig: {
@@ -27,22 +25,14 @@ module.exports = {
     plugins: [dtsExport()],
   },
   babel: {
-    presets: [
-      [presetEnv,{
-        modules: 'commonjs'
-      }]
-    ],
     plugins: [
-      [addModuleExports, {
-        addDefaultProperty: true
-      }]
+      [transformEs2015ModulesSimpleCommonjs]
     ]
   },
 
   // publish config
   branch: 'publish/cjs',
   packageRewrite: {
-    name: 'zan-utils-cjs',
     main: './index.js',
     typings: './index.d.ts',
     scripts: {},

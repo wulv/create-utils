@@ -1,8 +1,8 @@
 import gulp from 'gulp';
+
 import '../tasks';
-const util = require('util');
 
-
+process.env.NODE_ENV === 'production'
 
 gulp.on('error', e => console.log('error', e));
 

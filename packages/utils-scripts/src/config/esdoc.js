@@ -1,9 +1,7 @@
 const base = require('./base');
-import path from 'path';
 
 module.exports = {
   source: base.esTemp,
-  package: './package.json',
   index: './README.md',
   destination: 'docs',
   plugins: [
@@ -27,13 +25,13 @@ module.exports = {
     {
       name: 'esdoc-importpath-plugin',
       option: {
-        replaces: [{ from: 'es_temp/', to: '' }],
+        replaces: [{ from: '.temp/', to: '' }],
       },
     },
     {
       name: 'esdoc-publish-html-plugin',
       option: {
-        template: path.join(base.curCwd, 'template'),
+        template: base.template,
       },
     },
     {

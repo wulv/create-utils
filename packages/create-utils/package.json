@@ -14,6 +14,7 @@
   },
   "files": [
     "lib",
+    "template",
     "package.json"
   ],
   "repository": {
@@ -31,9 +32,14 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.19.0",
-    "tslib": "^1.9.3"
+    "cross-spawn": "^6.0.5",
+    "fs-extra": "^7.0.1",
+    "tslib": "^1.9.3",
+    "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
+    "@types/cross-spawn": "^6.0.0",
+    "@types/fs-extra": "^5.0.4",
     "@types/node": "^10.12.18",
     "typescript": "^3.2.2"
   }

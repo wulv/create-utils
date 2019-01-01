@@ -10,9 +10,9 @@ module.exports = {
   // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
   testURL: 'http://localhost/',
 
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-  },
+  // transform: {
+  //   '^.+\\.tsx?$': 'ts-jest',
+  // },
 
   globals: {
     'ts-jest': {
@@ -26,6 +26,5 @@ module.exports = {
   },
 
   coverageReporters: ['lcov', 'json'],
-  testMatch: ['**/__tests__/**/*.test.ts'],
   testPathIgnorePatterns: ['/node_modules/'],
 };

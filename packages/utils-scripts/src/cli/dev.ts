@@ -1,12 +1,10 @@
-import shelljs from 'shelljs';
 import gulp from 'gulp';
+
 import '../tasks';
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
 
-
+process.env.NODE_ENV === 'development';
 if (!process.env.target) {
-  process.env.target = 'es';
+  process.env.target = 'cjs';
 }
 
 
