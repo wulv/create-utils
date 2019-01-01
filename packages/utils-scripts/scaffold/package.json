@@ -1,0 +1,19 @@
+{
+  "name": "<%= projectName %>",
+  "engines": {
+    "node": ">=8.11.0"
+  },
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "wulv-utils-cli dev",
+    "build": "wulv-utils-cli build",
+    "test": "wulv-utils-cli test",
+    "publish": "wulv-utils-cli publish"
+  },
+  "dependencies": {
+    "wulv-utils-cli": "^0.0.3"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2"
+  }
+}
